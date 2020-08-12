@@ -16,21 +16,21 @@ export default function Navbar(props) {
         <li>
           <Link
             to='/products'
-            className={pathname === '/products' ? 'underline' : ''}>
+            className={pathname.includes('/products') ? 'underline' : ''}>
             Products
           </Link>
         </li>
         <li>
           <Link
             to='/my-profile'
-            className={pathname === '/my-profile' ? 'underline' : ''}>
+            className={pathname.includes('/my-profile') ? 'underline' : ''}>
             My Profile
           </Link>
         </li>
         <li>
           <Link
             to='/about-us'
-            className={pathname === '/about-us' ? 'underline' : ''}>
+            className={pathname.includes('/about-us') ? 'underline' : ''}>
             About Us
           </Link>
         </li>

@@ -12,19 +12,19 @@ export default function Product() {
   }, []);
 
   return (
-    <div>
-      <div>
+    <>
+      <p>
         <strong>Product Details:</strong>
-      </div>
+      </p>
       <div>
         {content
           ? Object.entries(content).map(([key, val], index) => (
-              <div key={index}>
+              <div className="detail" key={index}>
                 {key}: {val}
               </div>
             ))
           : '404 Not Found This Product'}
       </div>
-    </div>
+    </>
   );
 }

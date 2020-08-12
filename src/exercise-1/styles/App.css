@@ -32,3 +32,22 @@ nav ul li a {
   font-weight: bold;
   color: rgb(84, 84, 84);
 }
+
+.products{
+  list-style-type: none;
+  padding: 0;
+}
+
+.products li {
+  margin: 0.5em 0;
+}
+
+.products li a {
+  text-decoration: none;
+  color: red;
+}
+
+.detail {
+  font-weight: 300;
+  margin: 0.5em 0;
+}

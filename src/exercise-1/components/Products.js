@@ -9,7 +9,7 @@ export default function Products(props) {
       <Switch>
         <Route exact path={`${path}`}>
           <div>All Products:</div>
-          <ul>
+          <ul className="products">
             <li>
               <Link to={`${url}/bicycle`}>Bicycle</Link>
             </li>
