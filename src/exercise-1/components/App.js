@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './Home';
 import Profile from './Profile';
 import About from './About';
@@ -53,6 +53,12 @@ class App extends Component {
               company={this.state.company}
               location={this.state.location}
             />
+          </Route>
+          <Route exact path='/goods'>
+            <Redirect to='/products' />
+          </Route>
+          <Route path='*'>
+            <Redirect to='/' />
           </Route>
         </Switch>
       </Router>
