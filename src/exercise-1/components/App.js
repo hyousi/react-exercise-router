@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import '../styles/App.css';
-import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './Home';
 import Profile from './Profile';
 import About from './About';
 import Products from './Products';
+import Navbar from './Navbar';
 
 class App extends Component {
   state = {
@@ -19,48 +20,35 @@ class App extends Component {
   };
 
   render() {
+
     return (
       <Router>
-        <nav>
-          <ul>
-            <li>
-              <Link to='/'>Home</Link>
-            </li>
-            <li>
-              <Link to='/products'>Products</Link>
-            </li>
-            <li>
-              <Link to='/my-profile'>My Profile</Link>
-            </li>
-            <li>
-              <Link to='/about-us'>About Us</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='/products'>
-            <Products />
-          </Route>
-          <Route exact path='/my-profile'>
-            <Profile user={this.state.user} />
-          </Route>
-          <Route exact path='/about-us'>
-            <About
-              company={this.state.company}
-              location={this.state.location}
-            />
-          </Route>
-          <Route exact path='/goods'>
-            <Redirect to='/products' />
-          </Route>
-          <Route path='*'>
-            <Redirect to='/' />
-          </Route>
-        </Switch>
+        <Navbar />
+        <main className='container'>
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route path='/products'>
+              <Products />
+            </Route>
+            <Route exact path='/my-profile'>
+              <Profile user={this.state.user} />
+            </Route>
+            <Route exact path='/about-us'>
+              <About
+                company={this.state.company}
+                location={this.state.location}
+              />
+            </Route>
+            <Route exact path='/goods'>
+              <Redirect to='/products' />
+            </Route>
+            <Route path='*'>
+              <Redirect to='/' />
+            </Route>
+          </Switch>
+        </main>
       </Router>
     );
   }
