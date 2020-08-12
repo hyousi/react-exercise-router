@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "bicycle",
+      "price": 30,
+      "quantity": 15,
+      "desc": "Bicycle is Good"
+    },
+    {
+      "id": 2,
+      "name": "tv",
+      "price": 40,
+      "quantity": 16,
+      "desc": "TV is Good"
+    },
+    {
+      "id": 3,
+      "name": "pencil",
+      "price": 50,
+      "quantity": 17,
+      "desc": "Pencil is Good"
+    }
+  ]
+}

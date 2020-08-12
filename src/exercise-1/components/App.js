@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import Profile from './Profile';
 import About from './About';
+import Products from './Products';
 
 class App extends Component {
   state = {
@@ -26,6 +27,9 @@ class App extends Component {
               <Link to='/'>Home</Link>
             </li>
             <li>
+              <Link to='/products'>Products</Link>
+            </li>
+            <li>
               <Link to='/my-profile'>My Profile</Link>
             </li>
             <li>
@@ -37,6 +41,9 @@ class App extends Component {
         <Switch>
           <Route exact path='/'>
             <Home />
+          </Route>
+          <Route path='/products'>
+            <Products />
           </Route>
           <Route exact path='/my-profile'>
             <Profile user={this.state.user} />
